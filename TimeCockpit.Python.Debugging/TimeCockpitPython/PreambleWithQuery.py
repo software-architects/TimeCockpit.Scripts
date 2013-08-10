@@ -58,6 +58,7 @@ clr.AddReferenceToFileAndPath(Path.Combine(timeCockpitLocation, "TimeCockpit.Dat
 clr.AddReference("TimeCockpit.Common")
 clr.AddReference("TimeCockpit.UI.Common")
 clr.AddReference("System.Core")
+clr.AddReference("System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes")
 import System
 from TimeCockpit.Common import Logger, LogLevel
 from TimeCockpit.UI.Common import TimeCockpitApplication, DataContextConnections, ConnectionType

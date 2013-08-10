@@ -62,7 +62,7 @@ from System import *
 from System import DateTime
 from System import Guid
 from System import BitConverter
-from TimeCockpit.Data.DataModel import ModelElement, ModelEntity, Relation, HierarchicalRelation, TextProperty, DateTimeProperty, NumericProperty, BooleanProperty, CalculatedProperty, ValidationRule, BinaryProperty, GuidProperty, PersistBehavior, ModelProperty, Ownership, EntityView, FileProperty
+from TimeCockpit.Data.DataModel import ModelElement, ModelEntity, Relation, TextProperty, DateTimeProperty, NumericProperty, BooleanProperty, CalculatedProperty, ValidationRule, BinaryProperty, GuidProperty, PersistBehavior, ModelProperty, Ownership, EntityView, FileProperty
 from TimeCockpit.Data.Sync import SyncContent
 from TimeCockpit.Data import DataContextType
 from TimeCockpit.Data import DataContext
@@ -78,6 +78,7 @@ from TimeCockpit.Data.Security import *
 from TimeCockpit.Common import Logger, LogLevel
 from TimeCockpit.UI.Common import TimeCockpitApplication, DataContextConnections, ConnectionType
 clr.AddReference("System.Core")
+clr.AddReference("System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes")
 import System
 clr.ImportExtensions(System.Linq)
 
