@@ -121,6 +121,15 @@ def exportSignalsToStream(dc, dayToExport, deviceNameToExport, targetStream, sub
 		
 		# Generate method that regenerates activity log
 		targetStream.WriteLine("def {0}(dc, targetDay):", subroutineName)
+
+		targetStream.WriteLine("\t\"\"\"", subroutineName)
+		targetStream.WriteLine("\tGenerates activity log in the current user account")
+		targetStream.WriteLine("")
+		targetStream.WriteLine("\tKeyword arguments:")
+		targetStream.WriteLine("\tdc -- DataContext that should be used to write activity log")
+		targetStream.WriteLine("\ttargetDay -- Day into which the activity log should be imported")
+		targetStream.WriteLine("\t\"\"\"", subroutineName)
+
 		targetStream.WriteLine("\tentities = dc.Select(\"From E In SYS_Entity Select E\")")
 		targetStream.WriteLine("\tdevice = dc.SelectSingle(\"From D In SYS_Device Select D\")")
 		targetStream.WriteLine("\tif device is None:")

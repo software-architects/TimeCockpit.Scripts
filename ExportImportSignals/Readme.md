@@ -6,18 +6,17 @@ When [time cockpit](http://www.timecockpit.com) stores a user's activity log,
 it encrypts the data with the user's signal data password. Therefore, nobody
 else can read her activity log.
 
-In some situations, it is useful to be able to export a user's activity log
-and import it in a different user's account or even a different time cockpit
-subscription. Such situations are for instance:
+In some situations it might be useful to export a user's activity log
+and import it in a different user account or even a different time cockpit
+subscription. Such situations could be:
 
 * Trainings
-* Product demonstrations
+* Product demos
 * Standardized test scenarios
 
 The script in this sample can be used to auto-generate a script that you
 can use to recreate the activity log of a given day/device in any 
-account you like. Additionally, you can import the activity log for a
-different date than the one you exported it.
+account you like.
 
 # How to Use the Script
 
@@ -89,6 +88,6 @@ the imported activity log.
 
 ## Important Tips
 
-If you need to import multiple times, you can delete the activity log
+If you need to run the import multiple times, you can delete the activity log
 using time cockpits *Delete signals* wizard. You find it in the
 calendar's Ribbon.
