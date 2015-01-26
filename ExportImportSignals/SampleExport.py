@@ -3,6 +3,7 @@
 # =================================================================================================================
 #	SIGNAL DATA EXPORT SCRIPT
 # -----------------------------------------------------------------------------------------------------------------
+#	The MIT License (MIT)
 #	Copyright (c) 2015 software architects gmbh
 #	
 #	Permission is hereby granted, free of charge, to any person obtaining a copy

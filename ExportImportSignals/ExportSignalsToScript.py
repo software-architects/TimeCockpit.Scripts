@@ -3,6 +3,7 @@
 # =================================================================================================================
 #	SIGNAL DATA EXPORT SCRIPT (see SampleExport.py for an example of how to use)
 # -----------------------------------------------------------------------------------------------------------------
+#	The MIT License (MIT)
 #	Copyright (c) 2015 software architects gmbh
 #	
 #	Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -180,6 +181,11 @@ def exportSignalsToStream(dc, dayToExport, deviceNameToExport, targetStream, sub
 		targetStream.WriteLine("\tfinally:")
 		targetStream.WriteLine("\t\tif (dc.DbClient.TransactionCount > 0):")
 		targetStream.WriteLine("\t\t\tdc.DbClient.CommitTransaction()")
+		targetStream.WriteLine()
+
+		targetStream.WriteLine("# Uncomment and adapt the following two lines to enable the import execution")
+		targetStream.WriteLine("# dc = Context")
+		targetStream.WriteLine("# {0}(dc, DateTime({1}, {2}, {3}))", subroutineName, dayToExport.Year, dayToExport.Month, dayToExport.Day)
 		
 	finally:
 		targetStream.Close()
