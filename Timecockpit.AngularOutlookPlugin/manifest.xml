@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  <!-- Read more about Office Add-Ins manifests at https://msdn.microsoft.com/en-us/library/office/dn554255.aspx -->
+  <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MailApp">
+    <Id>47ACA615-DC95-469D-81EB-12F31D80348E</Id>
+    <Version>0.0.1.0</Version>
+    <ProviderName>time cockpit</ProviderName>
+    <DefaultLocale>en-US</DefaultLocale>
+    <DisplayName DefaultValue="Project Picker" />
+    <Description DefaultValue="Time Cockpit Project Picker Sample" />
+    <SupportUrl DefaultValue="http://www.timecockpit.com" />
+    <Hosts>
+      <Host Name="Mailbox" />
+    </Hosts>
+    <Requirements>
+      <Sets>
+        <Set Name="MailBox" MinVersion="1.1" />
+      </Sets>
+    </Requirements>
+    <FormSettings>
+      <Form xsi:type="ItemEdit">
+        <DesktopSettings>
+          <SourceLocation DefaultValue="https://projectpicker.azurewebsites.net/index.html" />
+        </DesktopSettings>
+      </Form>
+    </FormSettings>
+    <Permissions>ReadWriteItem</Permissions>
+    <Rule xsi:type="RuleCollection" Mode="Or">
+      <Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Edit" />
+    </Rule>
+    <DisableEntityHighlighting>false</DisableEntityHighlighting>
+  </OfficeApp>
