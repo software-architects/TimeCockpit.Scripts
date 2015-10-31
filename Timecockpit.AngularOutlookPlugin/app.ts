@@ -54,6 +54,11 @@ class ProjectListController {
 		var currentAppointment = <Office.Types.AppointmentCompose>Office.context.mailbox.item;
 		currentAppointment.subject.setAsync("Working on project '" + projectCode + "'");
 	}
+	
+	public clearLocalStorage() {
+		localStorage.clear();
+		console.log("Local storage cleared");
+	}
 }
 
 /** Controller for login form */
@@ -100,6 +105,7 @@ angular.module('ProjectPicker', [ 'ngRoute' ])
 			.when('/projectList', { 
 				template: `
 				<h1>Project List</h1>
+				<p ng-click="vm.clearLocalStorage()">Clear login cache</p>
 				<p class="text-info" ng-show="vm.isLoading">
 					Loading projects from time cockpit ...
 				</p>
